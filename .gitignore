@@ -1,0 +1,4 @@
+node_modules
+apps/api/dist
+apps/client/dist
+apps/api/.env
