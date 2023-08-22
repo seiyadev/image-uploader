@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href=" https://real-plum-barnacle-fez.cyclic.cloud ">
+    <a href="https://real-plum-barnacle-fez.cyclic.cloud">
       Demo
     </a>
     <span> | </span>
