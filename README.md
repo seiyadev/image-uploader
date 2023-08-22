@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href=" https://real-plum-barnacle-fez.cyclic.cloud ">
       Demo
     </a>
     <span> | </span>
@@ -41,7 +41,7 @@
 
 My experience during the development of this challenge was very funny. I dealing with a new framework: [Nest.js](https://nestjs.com/). 
 I learned to submit images to the server and create a monorepo with [TURBOREPO](https://turbo.build/repo).
-This is my first project of dev challenges, visit my [demo](https://{your-demo-link.your-domain})!
+This is my first project of dev challenges, visit my [demo](https://real-plum-barnacle-fez.cyclic.cloud)!
 
 ### Built With
 
@@ -53,6 +53,7 @@ This is my first project of dev challenges, visit my [demo](https://{your-demo-l
 - [NextUI](https://nextui.org/)
 - [Nest.js](https://nestjs.com/)
 - [TURBOREPO](https://turbo.build/repo)
+- [Cloudinary](https://cloudinary.com/)
 
 ## Features
 
