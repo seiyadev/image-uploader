@@ -24,7 +24,13 @@
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 800px) {
+  .image-drag {
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 590px) {
   .image-drag {
     display: none;
   }

@@ -4,9 +4,12 @@ import { ChooseImage } from "./components/ChooseImage";
 import { UploadState } from "./components/UploadState";
 import { UploadSuccess } from "./components/UploadSuccess";
 import { ToastContainer, toast } from "react-toastify";
+import { Button } from "@nextui-org/react";
+import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
 import axios from "axios";
 
 function App() {
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
   const [image, setImage] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [success, setSuccess] = React.useState<boolean>(false);
@@ -44,7 +47,23 @@ function App() {
   };
 
   return (
-    <>
+    <main
+      className={`${
+        theme === "light" ? "light" : "dark"
+      } text-foreground bg-background`}
+    >
+      <Button
+        variant="solid"
+        color="primary"
+        isIconOnly
+        size="lg"
+        className="absolute right-4 top-4"
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      >
+        <div className="text-white text-xl">
+          {theme === "light" ? <MdOutlineNightlight /> : <MdOutlineLightMode />}
+        </div>
+      </Button>
       <section className="flex flex-col justify-between items-center height-100">
         <div className="flex w-full h-full justify-center items-center">
           {!image && !loading && !success && (
@@ -88,7 +107,7 @@ function App() {
           background: "#2f80ed",
         }}
       />
-    </>
+    </main>
   );
 }
 
