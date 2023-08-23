@@ -5,8 +5,10 @@ import { UploadState } from "./components/UploadState";
 import { UploadSuccess } from "./components/UploadSuccess";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import { Button } from "@nextui-org/react";
 
 function App() {
+  const [theme, setTheme] = React.useState<"light" | "dark">("light");
   const [image, setImage] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [success, setSuccess] = React.useState<boolean>(false);
@@ -27,6 +29,7 @@ function App() {
             "Content-Type": "multipart/form-data",
           },
         });
+        console.log(response.data.url);
         setImage(response.data.url);
         setTimeout(() => {
           setLoading(false);
@@ -42,7 +45,21 @@ function App() {
   };
 
   return (
-    <>
+    <main
+      className={`${
+        theme === "light" ? "light" : "dark"
+      } text-foreground bg-background`}
+    >
+      <Button
+        color="primary"
+        size="md"
+        className="absolute right-4 top-4 cursor-pointer select-none text-white"
+        onClick={() => {
+          setTheme(theme === "light" ? "dark" : "light");
+        }}
+      >
+        {theme === "light" ? "Switch to dark" : "Switch to light"}
+      </Button>
       <section className="flex flex-col justify-between items-center height-100">
         <div className="flex w-full h-full justify-center items-center">
           {!image && !loading && !success && (
@@ -86,7 +103,7 @@ function App() {
           background: "#2f80ed",
         }}
       />
-    </>
+    </main>
   );
 }
 
