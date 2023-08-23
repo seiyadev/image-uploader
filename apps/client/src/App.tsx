@@ -27,14 +27,12 @@ function App() {
             "Content-Type": "multipart/form-data",
           },
         });
-        console.log(response.data.url);
         setImage(response.data.url);
         setTimeout(() => {
           setLoading(false);
           setSuccess(true);
         }, 500);
       } catch (error) {
-        console.log(error);
         toast.error("🤧 Something went wrong!");
       }
     } else {
