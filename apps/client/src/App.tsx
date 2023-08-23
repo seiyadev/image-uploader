@@ -5,7 +5,6 @@ import { UploadState } from "./components/UploadState";
 import { UploadSuccess } from "./components/UploadSuccess";
 import { ToastContainer, toast } from "react-toastify";
 import { Button } from "@nextui-org/react";
-import { MdOutlineLightMode, MdOutlineNightlight } from "react-icons/md";
 import axios from "axios";
 
 function App() {
@@ -61,7 +60,7 @@ function App() {
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
         <div className="text-white text-xl">
-          {theme === "light" ? <MdOutlineNightlight /> : <MdOutlineLightMode />}
+          {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
         </div>
       </Button>
       <section className="flex flex-col justify-between items-center height-100">
