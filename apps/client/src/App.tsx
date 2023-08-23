@@ -52,9 +52,7 @@ function App() {
       } text-foreground bg-background`}
     >
       <Button
-        variant="solid"
         color="primary"
-        isIconOnly
         size="lg"
         className="absolute right-4 top-4"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
