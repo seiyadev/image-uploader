@@ -7,7 +7,6 @@ import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 
 function App() {
-  const [theme, setTheme] = React.useState<"light" | "dark">("light");
   const [image, setImage] = React.useState<string | null>(null);
   const [loading, setLoading] = React.useState<boolean>(false);
   const [success, setSuccess] = React.useState<boolean>(false);
@@ -45,17 +44,7 @@ function App() {
   };
 
   return (
-    <main
-      className={`${
-        theme === "light" ? "light" : "dark"
-      } text-foreground bg-background`}
-    >
-      <span
-        className="absolute right-4 top-4 text-xl"
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-      >
-        {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-      </span>
+    <main className="light text-foreground bg-background">
       <section className="flex flex-col justify-between items-center height-100">
         <div className="flex w-full h-full justify-center items-center">
           {!image && !loading && !success && (
