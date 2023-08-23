@@ -4,7 +4,6 @@ import { ChooseImage } from "./components/ChooseImage";
 import { UploadState } from "./components/UploadState";
 import { UploadSuccess } from "./components/UploadSuccess";
 import { ToastContainer, toast } from "react-toastify";
-import { Button } from "@nextui-org/react";
 import axios from "axios";
 
 function App() {
@@ -51,16 +50,12 @@ function App() {
         theme === "light" ? "light" : "dark"
       } text-foreground bg-background`}
     >
-      <Button
-        color="primary"
-        size="lg"
-        className="absolute right-4 top-4"
+      <span
+        className="absolute right-4 top-4 text-xl"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       >
-        <div className="text-white text-xl">
-          {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
-        </div>
-      </Button>
+        {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+      </span>
       <section className="flex flex-col justify-between items-center height-100">
         <div className="flex w-full h-full justify-center items-center">
           {!image && !loading && !success && (
