@@ -44,7 +44,7 @@ function App() {
   };
 
   return (
-    <main className="light text-foreground bg-background">
+    <>
       <section className="flex flex-col justify-between items-center height-100">
         <div className="flex w-full h-full justify-center items-center">
           {!image && !loading && !success && (
@@ -88,7 +88,7 @@ function App() {
           background: "#2f80ed",
         }}
       />
-    </main>
+    </>
   );
 }
 
